@@ -3,12 +3,14 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Register from './components/Register';
 import Login from './components/Login';
+import ChangePassword from './components/ChangePassword';
 function App() {
   return (
     <div className="App">
     <Navbar/>
     {/* <Register/> */}
-    <Login/>
+    {/* <Login/> */}
+     <ChangePassword/>
     </div>
   );
 }
