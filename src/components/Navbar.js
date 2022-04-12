@@ -1,23 +1,36 @@
 import React from 'react';
+import {NavLink,HashRouter,Route} from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
+import Dashboard from './Dashboard';
 
 class Navbar extends React.Component{
     render(){
         return(
             <div>
-                <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">ECommerce</a>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Login</a>
+              <HashRouter>
+
+            
+                <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a className="navbar-brand" href="#">ECommerce</a>
+  <ul className="navbar-nav">
+    <li className="nav-item">
+      <NavLink className="nav-link" to="/login">Login</NavLink>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Register</a>
+    <li className="nav-item">
+      <NavLink className="nav-link" to="/register">Register</NavLink>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Contact</a>
+    <li className="nav-item">
+      <NavLink className="nav-link" to="/contact">Contact</NavLink>
     </li>
   </ul>
 </nav>
+
+  <Route path="/login"  component={Login}></Route>
+  <Route path="/register"  component={Register}></Route>
+  <Route path="/dashboard"  component={Dashboard}></Route>
+
+</HashRouter>
       </div>
         )
     }
